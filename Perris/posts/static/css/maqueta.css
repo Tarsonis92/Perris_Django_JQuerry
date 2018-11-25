@@ -1,0 +1,198 @@
+*{
+	padding:0;
+	margin:0;
+    box-sizing:box-box;
+
+}
+
+ .contenedor {
+	
+	width:100%;
+	max-width:1000px;
+	margin:auto;
+    /* Flexbox */
+    display:flex;
+    flex-flow:row wrap;
+    flex-grow:1;
+ 
+}
+/*Cuerpo de la pagina*/
+body{
+	
+    background:white;
+     
+}
+/*Primer titulo de la pagina*/
+h1{
+color:#fff;
+
+}
+/*Clase logo*/
+header .logo {
+	color:#fff;
+	font-size:30px;
+}
+/*Logo de la  pagina*/
+header .logo img {
+	width:50px;
+	vertical-align: top;
+}
+/*Nombre de la pagina con link activado*/
+header .logo a {
+	color:#fff;
+	text-decoration: none;
+	line-height:50px;
+}
+
+header {
+	background:#85D4B7;
+   width:50%;
+	/*padding-right:15px;*/
+	
+
+	/* Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	
+	padding: 15px;
+	width:100%;
+	max-width:1000px;
+	margin:auto;
+    /* Flexbox */
+    display:flex;
+    flex-flow:row wrap;
+    flex-grow:1;
+
+}
+
+
+header nav {
+	width:100%;
+	
+	/* Flexbox */
+
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	padding:1px;
+
+}
+
+header nav a {
+	background:#6ACCAA;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	padding:10px;
+
+
+	/* Flexbox */
+	flex-grow:1;
+
+}
+
+header nav a:hover {
+	background:#85D48A;
+}
+
+.contenedor .carrusel{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	right:100px;
+	background:#6DCCAA;
+	width:100%;
+  }
+
+  footer{
+	
+	background:gray;
+	/*padding:10px;
+	width:100%;*/
+
+	padding: 15px;
+	width:100%;
+	max-width:1000px;
+	margin:auto;
+    /* Flexbox */
+    display:flex;
+    flex-flow:row wrap;
+    flex-grow:1;
+
+
+}
+
+/* Metodo para celular */
+
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction:column;
+        
+	}
+
+	header {
+		flex-direction:column;
+		padding:0;
+        width: 100%;
+	}
+
+	header .logo {
+		margin:20px 0;
+        
+	}
+
+	header nav {
+		width: 100%;
+        
+	}
+
+	header nav{
+		
+   flex-direction:column;
+   width:100%;
+
+	}
+
+header nav a {
+	
+width:90%;
+
+
+}
+
+/*.textoimages{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+
+
+.textoimages{
+	
+	width:100%;
+}*/
+
+
+
+	/*aside {
+		flex-direction:row;
+		flex:0;
+	}
+
+	aside .widget {
+		flex-grow:1;
+	}*/
+}
+
+/*@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+
+	footer {
+		justify-content:space-around;
+	}
+}*/
+
+

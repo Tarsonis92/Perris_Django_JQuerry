@@ -1,0 +1,93 @@
+/* Formulario*/
+
+h1{
+	color:black;
+	display: flex;
+	justify-content:center;
+    align-items:center;
+}
+
+#registration_form{
+	width: 100%;
+	/* Flexbox */
+	display: flex;
+	flex-direction: column;
+}
+
+#registration_form div{
+	/*padding-left: 200px;*/
+	/* Flexbox */
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+#registration_form input{ 
+	/* Flexbox */
+	display:flex;
+	justify-content:center;
+    align-items:center;
+}
+
+#registration_form input Fecha de Nacimiento{
+    display:flex;
+	justify-content:center;
+    align-items:center;
+}
+
+
+
+.form_text {
+	margin-left: 10px;
+	height: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #4A5D77;
+	padding: 5px;
+	text-align: center;
+	align-self: center;
+}
+
+.btn-enviar {
+	width: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	outline: 0px;
+	align-self: center;
+}
+
+.error {
+	font-size: 15px;
+	font-family: Arial;
+	color: #FF0052;
+	font-weight: bold;
+}
+
+/*Parte final de la pagina*/
+
+@media screen and (max-width: 800px) {
+	
+#registration_form{
+	/* Flexbox */
+    display:flex;
+	justify-content:center;
+    align-items:center;
+
+}
+
+
+}
+

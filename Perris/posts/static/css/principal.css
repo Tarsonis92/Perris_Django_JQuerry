@@ -1,0 +1,176 @@
+.main{
+	
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+
+.ventanaBasica{
+	
+
+	display:flex;
+	flex-direction:row;
+}
+
+
+
+.redesSociales{
+	
+	background:#6ACCAA;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	width:100%;
+}
+
+
+
+.segundo{
+	
+	width:90%;
+	text-align:right;
+	border-right:10px solid #fff;
+}
+
+.tercero{
+	
+	border-left:10px solid #fff;
+	text-decoration:none;
+}
+
+
+.cuarto{
+	
+background:#6DCCAA;
+width:95%;
+}
+
+.cuarto img{
+	align-items:center;
+
+}
+
+/* Galeria de imagenes */
+
+.galeria{
+	background:#6DCCAA;
+	padding:10px;
+}
+
+
+.galeria {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  
+  padding: 10px;
+	display:flex;
+	justify-content:space-around;
+}
+
+.galeria .caja{
+    width: 32%;
+    overflow: hidden;
+
+		/*FLEX*/
+		display:flex;
+		flex-direction:column;
+		justify-content:space-between;
+}
+
+.galeria .caja img{
+    object-fit:cover;
+}
+
+.galeria .largo img{
+	 height: 49%;
+}
+
+.galeria .maslargo img{
+	height: 30%;
+}
+
+.galeria .maslargo #larga{
+	height: 66%;
+}
+
+/* Metodo para celular */
+
+@media screen and (max-width: 800px) {
+	
+.carrusel{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+  }
+
+	header nav{
+		
+   flex-direction:column;
+   width:100%;
+
+	}
+
+header nav a {
+	
+width:90%;
+
+
+}
+
+/*.textoimages{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+
+
+.textoimages{
+	
+	width:100%;
+}*/
+
+#carrusel img{
+    width: 100%;
+    
+}
+
+.ventanaBasica{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+}
+
+.galeria{
+	
+	width:100%;
+}
+
+.galeria img{
+	
+	width:100%;
+}
+
+	/*aside {
+		flex-direction:row;
+		flex:0;
+	}
+
+	aside .widget {
+		flex-grow:1;
+	}*/
+}
+
+/*@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+
+	footer {
+		justify-content:space-around;
+	}
+}*/
+
+

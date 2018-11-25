@@ -1,0 +1,33 @@
+{% extends 'maqueta.html' %}
+{% load staticfiles %}
+
+{% block principal %}
+
+{% for result in results %}
+   
+
+{% endfor %}
+<link rel="stylesheet" href="{% static 'css/formularioPerros.css' %}">
+<script src="{% static 'js/agregarPerro.js' %}"></script>
+<form id="registration_form" action="#" method="post">
+  <h1>Agregar Mascota</h1>
+            <div class="codigo">codigo de Mascota :{{result.codigoMascota}}<input type="Nombre" class="form_text"></div>
+            <br>
+            <div class="image">Imagen:{{result.imagen}}<input type="file" class="file" name="pic" accept="image/*">
+            <span class="error" id="errorimagen"></span></div>
+            <br>
+            <div class="nombre">Nombre de la Mascota : <input type="Nombre" class ="" name="nombre" ></div>
+            <br>
+            <div class="edad">Edad de la Mascota : <input type="number" class ="" name="nombre" ></div>
+            <br>
+            <div class="raza">Raza de la Mascota :{{result.razaMascota}}
+                <select id="menuDesplegable">
+                    <option value="Ninguno">Ninguno</option> 
+                  </select>
+            </div>
+            <br>
+            <div class="descripcion">Descripcion :{{result.descripcion}}<textarea rows="4" cols="50"></textarea>></div> </div>
+            <br>
+            <div class="boton"><input type="button" value="Agregar" height="25" width="70"></div>
+</form>
+{% endblock %}

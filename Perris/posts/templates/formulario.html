@@ -1,0 +1,55 @@
+{% extends 'maqueta.html' %}
+{% load staticfiles %}
+
+{% block principal %}
+<link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+<script type="text/javascript" src="{% static 'js/agregarPersona.js' %}"></script>
+{% for result in results %}
+   
+
+{% endfor %}
+
+
+<form id="registration_form" action="#" method="post">
+  <h1>Formulario</h1>  
+          
+            <div class="nombre">Nombre: {{result.nombrePersona}}<input type="Nombre" class="form_text"></div>
+            <br>
+            <div class="apellido">Apellidos: {{result.apellidoPersona}}<input type="Nombre" class="form_text"></div>
+            <br>
+            <div class="correo">Correo Electrónico:{{result.email}}<input type="email" class="form_text" name="email" id="email">
+            <span class="error" id="erroremail"></span></div>
+            <br>
+            <div class="fecha">Fecha de Nacimiento : {{result.fechaNacimiento}}<input type="date" class ="" name="date" ></div>
+            <br>
+            <div class="telefono">Telefono de Contacto : {{result.numeroFono}}<input type="Num" class="form_text" name="Num" id="Num"> </div>
+            <br>
+            <table>
+              <tr>
+                  <td align=right>Region :{{result.regionPersona}}</td>
+                  <td align=left colspan=3>
+                      <select name="region" id="region" onkeypress="cargarCiudades();">
+                            <option value="">Selecciona una Region...</option> 
+                      </select>
+                  </td>
+              </tr>
+                  <tr>
+                      <td align=right>Ciudad:{{result.ciudadPersona}}</td>
+                      <td align=left colspan=3>
+                          <select name="ciudad" id="ciudad">
+                              <option value="Ninguna">Selecciona una Ciudad...</option>
+                          </select>
+                      </td>
+                  </tr>
+            </table>
+            <br>
+            <div class="vivienda">Tipo de Vivienda :{{result.viviendaPersona}} 
+              <select id="tipos">
+                <option value="">Selecciona el tipo de Vivienda</option>
+              </select>
+            </div>
+            <br>
+<div><input type="button" value="Agregar" height="20"></div>
+          
+</form>
+{% endblock %}

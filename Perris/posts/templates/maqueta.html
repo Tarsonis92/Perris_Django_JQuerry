@@ -1,0 +1,72 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/maqueta.css' %}">
+        <script src="{% static 'js/prefix.js' %}" type="test/javascript"></script>
+        
+        <script src="{% static 'js/jquery.js'%}"></script>
+        <script src="{% static 'js/jquery.bxslider.min.js'%}"></script>
+        <script src="{% static 'js/codigo.js' %}"></script>
+        
+        <script src="{% static 'css/jquery.bxslider.css'%}"></script>
+        <link rel="stylesheet" href="{% static 'css/jquery.bxslider.css'%}">
+        
+        <link rel="stylesheet" href="{% static 'css/principal.css'%}">
+        
+        <link rel="stylesheet" href="{% static 'css/carrusel.css'%}">
+    	
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="logo">
+                <img src="{% static 'img/kisspng-siberian-husky-paw-puppy-clip-art-huella-de-perro-5aafabc6afbb78.5991014415214622147198.png' %}" height="50">
+	            <a href="#">Mis Perris</a>
+            </div>
+            {% if request.user.is_authenticated %}
+                {% if user.is_staff %}
+            <nav>
+                <a href="/index">Inicio</a>
+                <a>Quienes Somos</a>
+                <a href="/index2">Servicios</a>
+                <a href="/index4">Registro Perro</a>
+                <a>Listar Perros</a>
+                <a href="/index3">Login</a>
+                <a>Contactanos</a>
+            </nav>
+                {% else %}
+                    <nav>
+                        <a href="/index">Inicio</a>
+                        <a>Quienes Somos</a>
+                        <a href="/index4">Registro Perro</a>
+                        <a href="/index3">Login</a>
+                    </nav>
+                {% endif %}
+            {% else %}
+                <nav>
+                    <a href="/index">Inicio</a>
+                    <a>Quienes Somos</a>
+                    <a href="/index2">Servicios</a>
+                    <a href="/index3">Login</a>
+                </nav>
+            {% endif %}    
+
+        </header>
+
+        <div class="contenedor"><!--Contenedor -->
+            {% block principal %}
+            
+            {% endblock %}
+        
+        </div>
+
+        <footer><!-- Final de pagina-->
+            Desarrollo Web y Mobile
+        </footer>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,25 @@
+{% extends 'maqueta.html' %}
+{% load staticfiles %}
+{% block principal %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+    
+
+{% for result in results %}
+   
+
+{% endfor %}
+    <form id="registration_form" action="#" method="post">
+        <h1>Login</h1>
+        <div><h3>Nombre de Usuario : {{result.Usuario}}</h3>
+        <input type="Nombre"name="username" class="form_text">
+        <span class="error" id="errorusuario"></span>
+        </div>   
+    <br>
+        <div><h3>Contraseña : {{result.Contraseña}}</h3>
+        <input type="password" name="password" class="form_text" name="Num" id="Num">
+        <span class="error" id="errorcontraseña"></span>
+        </div> 
+        <div><input type="submit" value="Login" height="20" id="boton"></div> 
+    </form>
+
+{% endblock %}
